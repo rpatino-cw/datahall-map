@@ -1,0 +1,43 @@
+{
+  "US-EXAMPLE-01A.DH1": {
+    "racks_per_row": 10,
+    "columns": [
+      {"label": "Left", "start": 1, "num_rows": 14},
+      {"label": "Right", "start": 141, "num_rows": 17}
+    ],
+    "serpentine": true,
+    "entrance": "bottom-right",
+    "total_racks": 310
+  },
+  "US-EXAMPLE-01A.DH2": {
+    "racks_per_row": 10,
+    "columns": [
+      {"label": "Left", "start": 1, "num_rows": 12},
+      {"label": "Right", "start": 121, "num_rows": 14}
+    ],
+    "serpentine": true,
+    "entrance": "bottom-right",
+    "total_racks": 260
+  },
+  "US-EXAMPLE-02B.SEC1": {
+    "racks_per_row": 10,
+    "columns": [
+      {"label": "A", "start": 1, "num_rows": 5},
+      {"label": "B", "start": 51, "num_rows": 5},
+      {"label": "C", "start": 101, "num_rows": 5}
+    ],
+    "serpentine": false,
+    "entrance": "bottom-right",
+    "total_racks": 150
+  },
+  "US-EXAMPLE-03C.DH1": {
+    "racks_per_row": 10,
+    "columns": [
+      {"label": "Left", "start": 1, "num_rows": 8},
+      {"label": "Right", "start": 81, "num_rows": 8, "racks_per_row": 5}
+    ],
+    "serpentine": true,
+    "entrance": "bottom-right",
+    "total_racks": 120
+  }
+}
