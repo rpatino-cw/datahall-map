@@ -68,7 +68,7 @@ Keys follow the pattern `SITE-CODE.HALL` (e.g., `US-CENTRAL-07A.DH2`, `US-CDZ01.
 
 When no layouts.json exists or the user asks to add a new hall, walk them through these questions:
 
-1. **Site code** — e.g., `US-CENTRAL-07A`, `US-VO201`, `US-EAST-13A`
+1. **Site code** — e.g., `US-CENTRAL-07A`, `US-VO201`, `US-EAST-13A` (or any name the user wants)
 2. **Hall name** — e.g., `DH1`, `DH2`, `SEC1`
 3. **How many column groups?** — Most halls have 2 (Left/Right), some have 3 (A/B/C)
 4. **For each column:**
