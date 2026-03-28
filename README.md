@@ -27,12 +27,6 @@
 
 <img src="assets/mode-connection.png" alt="Connection map mode" width="600">
 
-### Heatmap
-
-> *"which racks have the most issues?"*
-
-<img src="assets/mode-heatmap.png" alt="Heatmap mode" width="600">
-
 ---
 
 ## Get started

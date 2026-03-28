@@ -1,11 +1,11 @@
 ---
 name: datahall-map
-description: Generate ASCII data hall floor maps with rack highlights, walking routes, connection maps, and heatmaps. Use when anyone mentions rack map, floor plan, walking route, heatmap, "where is rack N", data hall layout, connection trace, or needs to visualize rack positions in a data hall.
+description: Generate ASCII data hall floor maps with rack highlights, walking routes, and connection maps. Use when anyone mentions rack map, floor plan, walking route, "where is rack N", data hall layout, connection trace, or needs to visualize rack positions in a data hall.
 ---
 
 # Datahall Map
 
-Generate ASCII floor maps for CoreWeave data halls. Maps show rack positions with highlights, walking routes from entrance, connection traces between racks, and issue heatmaps.
+Generate ASCII floor maps for CoreWeave data halls. Maps show rack positions with highlights, walking routes from entrance, and connection traces between racks.
 
 ## Data Source
 
@@ -184,34 +184,6 @@ Show two related racks (source + peer) highlighted in different colors. Used for
 
 Multiple peers supported — pass a set of rack numbers to highlight.
 
-### Mode 4: Heatmap
-
-Color racks by issue density. Used for identifying problem areas on the floor.
-
-**Trigger phrases:** "heatmap DH2", "show issue density", "hot spots in DH1"
-
-Input: a dict of `{rack_number: issue_count}`.
-
-| Symbol | Color | Count |
-|--------|-------|-------|
-| `X` | Red bold | 10+ issues |
-| `x` | Yellow | 5-9 issues |
-| `.` | Green | 1-4 issues |
-| `-` | Dim | 0 issues |
-
-```
-  US-CENTRAL-07A DH2 — Issue Heatmap
-
-  Left (R1–R120)                              Right (R121–R260)
-    1 - . - - - - - - - - 10                    121 - - - - - - - - - - 130
-   20 - - - x - - - - - - 11                    140 - - - - X - - - - - 131
-
-   21 - - - - - - - - - - 30                    141 - - - - - - . - - - 150
-   40 X - - - - - - - . - 31                    160 - - - - - - - - - - 151
-
-  X = 10+ issues   x = 5-9   . = 1-4   - = clean
-```
-
 ---
 
 ## Rack Symbols (All Modes)
@@ -222,9 +194,6 @@ Input: a dict of `{rack_number: issue_count}`.
 | `#` | Yellow bold — secondary / target / peer rack |
 | `!` | Red bold — error / wrong connection |
 | `-` | Dim — normal rack |
-| `X` | Red bold — heatmap: 10+ issues |
-| `x` | Yellow — heatmap: 5-9 issues |
-| `.` | Green — heatmap: 1-4 issues |
 
 ---
 
@@ -337,8 +306,6 @@ Users will say things like:
 | "route to rack 45" | Walking route |
 | "connection map R45 and R200 in DH2" | Connection |
 | "show link between rack 10 and 155" | Connection |
-| "heatmap DH2" (with issue data) | Heatmap |
-| "hot spots in DH1" | Heatmap |
 | "add a new hall" / "set up my site" | Setup wizard |
 | "show all halls" | List available layouts |
 
