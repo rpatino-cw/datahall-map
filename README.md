@@ -1,7 +1,11 @@
 <div align="center">
   <img src="assets/banner.png" alt="datahall-map" width="600">
-  <p><strong>Find any rack on the floor. From your terminal.</strong></p>
-  <p>A <a href="https://docs.anthropic.com/en/docs/claude-code">Claude Code</a> skill for data center teams.</p>
+
+  <br>
+
+  **Your hall has 320 racks. Your team uses a spreadsheet.**
+
+  This is a [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill that turns natural language into ASCII floor maps. Ask where a rack is. Get a map. Walk to it.
 
   [![License](https://img.shields.io/github/license/rpatino-cw/datahall-map?style=flat-square)](LICENSE)
   [![Issues](https://img.shields.io/github/issues/rpatino-cw/datahall-map?style=flat-square)](https://github.com/rpatino-cw/datahall-map/issues)
@@ -9,38 +13,75 @@
 
 ---
 
-### Highlight
-
-> *"where's rack 145?"*
-
-<img src="assets/mode-highlight.png" alt="Highlight mode" width="600">
-
-### Route
-
-> *"walk me to rack 85"*
-
-<img src="assets/mode-route.png" alt="Walking route mode" width="600">
-
-### Trace
-
-> *"show the connection between rack 45 and rack 200"*
-
-<img src="assets/mode-connection.png" alt="Connection map mode" width="600">
-
----
-
-## Get started
+## Install
 
 ```bash
 git clone https://github.com/rpatino-cw/datahall-map.git ~/.claude/skills/datahall-map
 ```
 
-Claude walks you through setup on first use. No config needed upfront.
+That's it. Open Claude Code and start asking.
+
+---
+
+## Define your hall
+
+First time? Claude walks you through a wizard. Answer 9 questions, get a layout.
+
+<img src="assets/demo-create.gif" alt="Creating a data hall layout" width="600">
+
+Or skip the wizard entirely:
+
+> *"Create a hall: US-EWR01.DH1, serpentine, 10/row, Left R1-140, Right R141-320, entrance bottom-right"*
+
+Layouts save to `~/.datahall/layouts.json`. Add as many halls as you need.
+
+---
+
+## Use it
+
+Just talk to Claude. No commands to memorize.
+
+<img src="assets/demo-usage.gif" alt="Walking route to rack 85" width="600">
+
+---
+
+## Three modes
+
+### Highlight &mdash; *"where's rack 145?"*
+
+<img src="assets/mode-highlight.png" alt="Highlight mode" width="600">
+
+### Route &mdash; *"walk me to rack 85"*
+
+<img src="assets/mode-route.png" alt="Walking route mode" width="600">
+
+### Trace &mdash; *"show the connection between rack 45 and rack 200"*
+
+<img src="assets/mode-connection.png" alt="Connection map mode" width="600">
+
+---
+
+## Why this exists
+
+Every data center team has the same problem: someone new walks onto the floor and has no idea where anything is. The rack numbering is serpentine, the columns are asymmetric, and the only "map" is a whiteboard photo from 2019.
+
+This skill encodes your hall layout once and generates maps on demand. No app to install. No browser to open. Just ask Claude.
+
+---
+
+## What it supports
+
+- **Serpentine or sequential** rack numbering
+- **Any number of columns** (2-column left/right, 3-column A/B/C, whatever your hall uses)
+- **Mixed racks-per-row** (10 on the left, 5 on the right? Fine.)
+- **Walking routes** from any entrance position (bottom-right, bottom-left, top-right, top-left)
+- **Connection maps** between any two racks (cable traces, IB links, cross-connects)
+- **Multiple halls** in one config file
 
 ---
 
 ## Contributing
 
-Fork, add your site to `sample-layouts.json`, PR. No hostnames or IPs — rack counts only.
+Fork, add your site to `sample-layouts.json`, PR. No hostnames or IPs -- rack counts only.
 
 [MIT](LICENSE)
