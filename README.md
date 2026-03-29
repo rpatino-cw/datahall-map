@@ -25,7 +25,7 @@ That's it. Open Claude Code and start asking.
 
 ## Define your hall
 
-First time? Claude walks you through a wizard. Answer 9 questions, get a layout.
+First time? Run `/datahall-map-creator` and Claude walks you through a wizard. Answer 9 questions, get a layout.
 
 <img src="assets/demo-create.gif" alt="Creating a data hall layout" width="600">
 
@@ -39,9 +39,23 @@ Your layout saves to `~/.datahall/layouts.json` -- a single JSON file with rack 
 
 ## Use it
 
-Just talk to Claude. No commands to memorize.
+Invoke the skill with `/datahall-map`, then tell it what you need:
+
+```
+/datahall-map where is rack 145
+/datahall-map walk me to rack 85 in DH1
+/datahall-map show the connection between rack 45 and rack 200
+```
 
 <img src="assets/demo-usage.gif" alt="Walking route to rack 85" width="600">
+
+Or just describe what you want -- Claude figures out the mode:
+
+```
+/datahall-map find R200
+/datahall-map route to rack 45
+/datahall-map trace R80 to R220
+```
 
 ---
 
