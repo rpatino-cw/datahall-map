@@ -5,7 +5,7 @@
 
   **Your hall has 320 racks. Your team uses a spreadsheet.**
 
-  This is a [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill that turns natural language into ASCII floor maps. Ask where a rack is. Get a map. Walk to it.
+  This is a [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill that turns natural language into ASCII floor maps. Define your hall layout once -- it saves to a simple JSON file -- then ask where a rack is. Get a map. Walk to it.
 
   [![License](https://img.shields.io/github/license/rpatino-cw/datahall-map?style=flat-square)](LICENSE)
   [![Issues](https://img.shields.io/github/issues/rpatino-cw/datahall-map?style=flat-square)](https://github.com/rpatino-cw/datahall-map/issues)
@@ -33,7 +33,7 @@ Or skip the wizard entirely:
 
 > *"Create a hall: US-EWR01.DH1, serpentine, 10/row, Left R1-140, Right R141-320, entrance bottom-right"*
 
-Layouts save to `~/.datahall/layouts.json`. Add as many halls as you need.
+Your layout saves to `~/.datahall/layouts.json` -- a single JSON file with rack counts, column groups, numbering style, and entrance position. No database, no server. Add as many halls as you need.
 
 ---
 
