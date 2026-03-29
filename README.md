@@ -75,9 +75,14 @@ Or just describe what you want -- Claude figures out the mode:
 
 ---
 
-## Why this exists
+## Standalone CLI
 
-For CLI lovers who'd rather type `dhmap R145` than open a browser, dig through a spreadsheet, or squint at a whiteboard photo from 2019. Define your hall once, get maps on demand. Integrate it into your own tools or just run it straight from the terminal.
+Don't need AI? Use **[dhmap](https://github.com/rpatino-cw/dhmap)** -- a standalone Python CLI that reads the same `layouts.json` and renders the same maps. No Claude required.
+
+```bash
+pipx install dhmap
+dhmap 145
+```
 
 ---
 
