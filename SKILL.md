@@ -153,7 +153,7 @@ Route starts at entrance, goes up/down the corridor, then turns into the target 
 
    41 - - - - - - - - - - 50        |            161 - - - - - - - - - - 170
    60 - - - - - - - - - - 51        |            180 - - - - - - - - - - 171
-                                     |                                          ◀ ENTRANCE
+                                     |                                          ENTRANCE ▶
 
   # = R25 (LEFT column)    |/+ = walking route
 ```
@@ -320,7 +320,7 @@ Row 2:  ====+         ← target row, turn marker
 Row 3:       |        ← walking toward target
 Row 4:       |        ← walking toward target
 Row 5:       |        ← walking toward target
-                                    ◀ ENTRANCE
+                                    ENTRANCE ▶
 ```
 
 **Wrong:**
@@ -342,10 +342,10 @@ The entrance is a door on ONE WALL -- not a line spanning the floor.
 
 | Entrance | Marker position | Marker text |
 |----------|----------------|-------------|
-| `bottom-right` | Below last row of RIGHTMOST column, right side | `◀ ENTRANCE` |
-| `bottom-left` | Below last row of LEFTMOST column, left side | `ENTRANCE ▶` |
-| `top-right` | Above first row of RIGHTMOST column, right side | `◀ ENTRANCE` |
-| `top-left` | Above first row of LEFTMOST column, left side | `ENTRANCE ▶` |
+| `bottom-right` | Below last row of RIGHTMOST column, right side | `ENTRANCE ▶` (arrow toward right wall) |
+| `bottom-left` | Below last row of LEFTMOST column, left side | `◀ ENTRANCE` (arrow toward left wall) |
+| `top-right` | Above first row of RIGHTMOST column, right side | `ENTRANCE ▶` (arrow toward right wall) |
+| `top-left` | Above first row of LEFTMOST column, left side | `◀ ENTRANCE` (arrow toward left wall) |
 
 - 6+ spaces of clearance between the last rack number and the marker
 - The `|` corridor pipe connects FROM this marker TO the target row
@@ -416,7 +416,8 @@ ROUTE SELF-CHECK
 1. [ ] RACK POSITION: row = (rack - col_start) // rpr, cross-checked?
 2. [ ] PIPE SCOPE: | appears ONLY between entrance and target row?
        ZERO | on the opposite side of target from entrance?
-3. [ ] ENTRANCE: Positioned marker (◀ ENTRANCE), NOT wall-to-wall ===?
+3. [ ] ENTRANCE: Positioned marker (ENTRANCE ▶ or ◀ ENTRANCE), NOT wall-to-wall ===?
+       Arrow points TOWARD the wall (▶ for right wall, ◀ for left wall)?
 4. [ ] TURN ALIGN: + sits in same column as every | pipe?
 5. [ ] TURN DIRECTION: ==== extends TOWARD target column?
 6. [ ] SINGLE TURN: ====+ or +==== on exactly ONE row?

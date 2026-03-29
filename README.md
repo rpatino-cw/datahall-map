@@ -3,9 +3,9 @@
 
   <br>
 
-  **Your hall has 320 racks. Your team uses a spreadsheet.**
+  **For you CLI lovers who refuse to leave the terminal.**
 
-  Use this [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill to create ASCII data hall maps. Define your hall layout once -- it saves to a simple JSON file -- then ask where a rack is. Get a map. Walk to it.
+  Use this [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill to create ASCII data hall maps. Define your hall layout once, it saves to a simple JSON file, then ask where a rack is. Get a map. Walk to it.
 
   [![License](https://img.shields.io/github/license/rpatino-cw/datahall-map?style=flat-square)](LICENSE)
   [![Issues](https://img.shields.io/github/issues/rpatino-cw/datahall-map?style=flat-square)](https://github.com/rpatino-cw/datahall-map/issues)
@@ -77,20 +77,7 @@ Or just describe what you want -- Claude figures out the mode:
 
 ## Why this exists
 
-Every data center team has the same problem: someone new walks onto the floor and has no idea where anything is. The rack numbering is serpentine, the columns are asymmetric, and the only "map" is a whiteboard photo from 2019.
-
-This skill encodes your hall layout once and generates maps on demand. No app to install. No browser to open. Just ask Claude.
-
----
-
-## What it supports
-
-- **Serpentine or sequential** rack numbering
-- **Any number of columns** (2-column left/right, 3-column A/B/C, whatever your hall uses)
-- **Mixed racks-per-row** (10 on the left, 5 on the right? Fine.)
-- **Walking routes** from any entrance position (bottom-right, bottom-left, top-right, top-left)
-- **Connection maps** between any two racks (cable traces, IB links, cross-connects)
-- **Multiple halls** in one config file
+For CLI lovers who'd rather type `dhmap R145` than open a browser, dig through a spreadsheet, or squint at a whiteboard photo from 2019. Define your hall once, get maps on demand. Integrate it into your own tools or just run it straight from the terminal.
 
 ---
 
